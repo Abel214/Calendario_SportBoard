@@ -57,4 +57,10 @@ public class TeamController {
     public List<String> getEquipos() {
         return Arrays.asList("Milan", "Inter", "Juventus", "Roma", "Napoli", "Lazio", "Fiorentina", "Atalanta", "Torino", "Sampdoria", "Genoa", "Bologna", "Udinese", "Cagliari", "Sassuolo", "Parma", "Verona", "Spezia", "Benevento", "Crotone");
     }
+
+    @GetMapping("/league/{league}")
+    public List<Team> getTeamsByLeague(@PathVariable String league) {
+        return teamRepository.findByLeague(league);
+    }
+
 }

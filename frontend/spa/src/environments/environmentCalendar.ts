@@ -45,7 +45,8 @@ export const environmentCalendar1 = {
                 create: '/',
                 update: '/{id}',
                 delete: '/{id}',
-                equip: '/equipos'
+                equip: '/equipos',
+                league: '/league/{id}',
             }
         },
     },
@@ -58,3 +59,4 @@ environmentCalendar1.services.teams.endpoints.create = `${environmentCalendar1.s
 environmentCalendar1.services.teams.endpoints.update = `${environmentCalendar1.services.teams.base}${environmentCalendar1.services.teams.endpoints.update}`;
 environmentCalendar1.services.teams.endpoints.delete = `${environmentCalendar1.services.teams.base}${environmentCalendar1.services.teams.endpoints.delete}`;
 environmentCalendar1.services.teams.endpoints.equip = `${environmentCalendar1.services.teams.base}${environmentCalendar1.services.teams.endpoints.equip}`;
+environmentCalendar1.services.teams.endpoints.league = `${environmentCalendar1.services.teams.base}${environmentCalendar1.services.teams.endpoints.league}`;

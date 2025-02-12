@@ -9,7 +9,7 @@ public class Team {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
+    private String league;
     public Team() {
     }
 
@@ -31,5 +31,13 @@ public class Team {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLeague() {
+        return league;
+    }
+
+    public void setLeague(String league) {
+        this.league = league;
     }
 }

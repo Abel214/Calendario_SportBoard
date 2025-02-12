@@ -15,6 +15,7 @@ export class TeamService {
     private updateUrl = environmentCalendar1.services.teams.endpoints.update;
     private deleteUrl = environmentCalendar1.services.teams.endpoints.delete;
     private equiposUrl = environmentCalendar1.services.teams.endpoints.equip;
+    private leagueUrl = environmentCalendar1.services.teams.endpoints.league;
     constructor(private httpClient: HttpClient) { }
 
     // Obtener todos los calendarios
@@ -46,11 +47,17 @@ export class TeamService {
         });
     }
 
-
+    getLeague(): Observable<string[]> {
+        return this.httpClient.get<string[]>(this.leagueUrl, {
+            headers: new HttpHeaders({
+                'Accept': 'application/json'
+            })
+        });
+    }
     getEquipos(): Observable<string[]> {
         return this.httpClient.get<string[]>(this.equiposUrl, {
             headers: new HttpHeaders({
-                'Accept': 'application/json'  // Cambiar a 'application/json' en lugar de 'text/plain'
+                'Accept': 'application/json'
             })
         });
     }
